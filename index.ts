@@ -3,7 +3,7 @@ import router from './rutes/router';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
-const server = new Server();
+const server = Server.instans;
 
 // body parser
 server.app.use(bodyParser.urlencoded({extended: true})) // Declarar el body parser
@@ -15,5 +15,5 @@ server.app.use('/', router);
 
 
 server.start( () => {
-    console.log('Servidor Corriendo');
+    console.log('Servidor Corriendo en el Puerto');
 });
